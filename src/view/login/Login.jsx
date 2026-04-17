@@ -104,7 +104,7 @@ function Login() {
                             <p className="text-center text-sm text-gray-600">
                                 Don,t hava a account?{" "}
                                 <Link
-                                    to="/E-Commerce-Store/signup"
+                                    to="/signup"
                                     className="text-blue-500 font-medium hover:underline"
                                 >
                                     Sign Up

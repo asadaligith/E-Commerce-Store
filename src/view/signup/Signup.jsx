@@ -114,7 +114,7 @@ function Signup() {
                             <p className="text-center text-sm text-gray-600">
                                 Already have an account?{" "}
                                 <Link
-                                    to="/E-Commerce-Store"
+                                    to="/"
                                     className="text-blue-500 font-medium hover:underline"
                                 >
                                     Login
