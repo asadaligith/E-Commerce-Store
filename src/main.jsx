@@ -7,10 +7,10 @@ import Signup from './view/signup/Signup.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-     <BrowserRouter>
+     <BrowserRouter basename="/E-Commerce-Store">
     <Routes>
-      <Route path="/E-Commerce-Store" element={<App />} />
-      <Route path="/E-Commerce-Store/Signup" element={<Signup />} />
+      <Route path="/" element={<App />} />
+      <Route path="/Signup" element={<Signup />} />
     </Routes>
   </BrowserRouter>,
   </StrictMode>,

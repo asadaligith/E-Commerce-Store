@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+</head>
+<body>
+    <script>
+        // GitHub Pages 404 redirect for single page applications
+        // This handles client-side routing for React Router apps
+        const path = window.location.pathname;
+        const segments = path.split('/').filter(Boolean);
+        
+        // If the path has at least one segment and it's not 'E-Commerce-Store', we need to handle it
+        // We redirect to the root index.html which will let React Router handle the routing
+        if (segments.length > 0 && segments[0] === 'E-Commerce-Store') {
+            // Remove the repo name and keep the rest of the path
+            const appPath = '/' + segments.slice(1).join('/');
+            window.location.href = '/E-Commerce-Store/?' + appPath.substring(1);
+        } else {
+            // Redirect to home
+            window.location.href = '/E-Commerce-Store/';
+        }
+    </script>
+</body>
+</html>
