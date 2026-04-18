@@ -1,13 +1,14 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { Link, Navigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { SignIn } from "../../services/auth";
 import { authcontext } from "../../context/AuthContext";
 
 
 
-const { user , setUser } = authcontext()
 
 function Login() {
+    const { user, setUser } = authcontext()
+    const navigate = useNavigate()
 
 
     return (
@@ -42,10 +43,10 @@ function Login() {
                         return errors;
                     }}
                     onSubmit={async (values, { setSubmitting }) => {
-                        const response = await SignIn(values.username,values.password)
+                        const response = await SignIn(values.username, values.password)
                         setUser(response)
-                        if (response){
-                            <Navigate to="/Dashboard" />
+                        if (response) {
+                            navigate("/")
                         }
                         setSubmitting(false);
                     }}
